@@ -207,6 +207,73 @@
       letter-spacing: 2px;
     }
 
+   .editorial {
+  background: #0d100e;
+  border-top: 1px solid rgba(212, 170, 92, 0.2);
+  border-bottom: 1px solid rgba(212, 170, 92, 0.2);
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 24px;
+}
+
+.editorial-card {
+  background: #121512;
+  border: 1px solid rgba(212, 170, 92, 0.25);
+  overflow: hidden;
+}
+
+.editorial-card.featured {
+  grid-row: span 2;
+}
+
+.editorial-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.editorial-card.featured img {
+  height: 420px;
+}
+
+.editorial-content {
+  padding: 24px;
+}
+
+.editorial-kicker {
+  color: #caa45d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.editorial-card h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.editorial-card:not(.featured) h3 {
+  font-size: 22px;
+}
+
+.editorial-card p {
+  color: #d8cfbd;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.editorial-card a {
+  color: #d4aa5c;
+  font-weight: bold;
+  font-size: 14px;
+} 
     .reviews {
       background: #080a09;
     }
@@ -410,6 +477,7 @@
 
       .feature-grid,
       .cards,
+      .editorial-grid,
       .number-grid,
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -428,10 +496,11 @@
     @media (max-width: 600px) {
       .feature-grid,
       .cards,
+      .editorial-grid,
       .number-grid,
       .footer-grid {
         grid-template-columns: 1fr;
-      }
+    }
 
       .feature {
         border-right: none;
@@ -512,7 +581,58 @@
         </div>
       </div>
     </div>
+<section class="editorial" id="conteudos">
+  <div class="container">
+    <div class="section-title">
+      <div>
+        <small>Publicação especializada</small>
+        <h2>Últimos conteúdos</h2>
+      </div>
+      <a class="btn" href="#">Ver todos</a>
+    </div>
 
+    <div class="editorial-grid">
+      <article class="editorial-card featured">
+        <img src="hero-tequilando-premium.png" alt="Tequila blanco em cena premium">
+        <div class="editorial-content">
+          <div class="editorial-kicker">Guia essencial</div>
+          <h3>O que é tequila blanco?</h3>
+          <p>
+            A expressão mais direta do agave azul: sem descanso em barril,
+            sem maquiagem sensorial e com foco na matéria-prima.
+          </p>
+          <a href="#">Ler conteúdo →</a>
+        </div>
+      </article>
+
+      <article class="editorial-card">
+        <img src="hero-tequilando-premium.png" alt="Review de tequila">
+        <div class="editorial-content">
+          <div class="editorial-kicker">Review</div>
+          <h3>Herradura Añejo vale a pena?</h3>
+          <p>
+            Uma análise honesta sobre preço, maturação, aroma, paladar
+            e experiência de consumo.
+          </p>
+          <a href="#">Ler review →</a>
+        </div>
+      </article>
+
+      <article class="editorial-card">
+        <img src="hero-tequilando-premium.png" alt="História da tequila">
+        <div class="editorial-content">
+          <div class="editorial-kicker">História</div>
+          <h3>Por que tequila não é só uma dose?</h3>
+          <p>
+            Uma bebida que atravessa território, cultura, economia,
+            identidade mexicana e rituais de consumo.
+          </p>
+          <a href="#">Ler análise →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
     <section class="reviews" id="reviews">
       <div class="container">
         <div class="section-title">
@@ -637,7 +757,7 @@
 
       <div>
         <h3>Navegação</h3>
-        <a href="#reviews">Reviews</a>
+      <a href="#conteudos">Conteúdos</a>  <a href="#reviews">Reviews</a>
         <a href="#historia">História</a>
         <a href="#youtube">YouTube</a>
         <a href="#sobre">Sobre</a>
