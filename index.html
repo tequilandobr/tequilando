@@ -267,6 +267,76 @@
   font-weight: bold;
   font-size: 14px;
 } 
+    .review-showcase {
+  background: #080b09;
+  border-top: 1px solid rgba(212,170,92,0.2);
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card {
+  background: #101310;
+  border: 1px solid rgba(212,170,92,0.18);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212,170,92,0.45);
+}
+
+.review-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.review-content {
+  padding: 22px;
+}
+
+.review-category {
+  color: #caa45d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.review-card h3 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: #d6cab5;
+  font-size: 14px;
+}
+
+.review-score {
+  color: #d4aa5c;
+  font-weight: bold;
+}
+
+.review-content p {
+  color: #d6cab5;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.review-content a {
+  color: #d4aa5c;
+  font-weight: bold;
+  font-size: 14px;
+}
     .reviews {
       background: #080a09;
     }
@@ -471,6 +541,7 @@
       .feature-grid,
       .cards,
       .editorial-grid,
+      .review-grid,
       .number-grid,
       .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -490,6 +561,7 @@
       .feature-grid,
       .cards,
       .editorial-grid,
+      .review-grid,
       .number-grid,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -623,6 +695,95 @@
           <a href="#">Ler análise →</a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+  <section class="review-showcase" id="ultimos-reviews">
+  <div class="container">
+
+    <div class="section-title">
+      <div>
+        <small>Análises independentes</small>
+        <h2>Últimos reviews</h2>
+      </div>
+
+      <a class="btn" href="#">Ver reviews</a>
+    </div>
+
+    <div class="review-grid">
+
+      <article class="review-card">
+        <img src="conteudo-herradura.jpg" alt="Herradura Añejo">
+
+        <div class="review-content">
+          <div class="review-category">
+            Añejo
+          </div>
+
+          <h3>Herradura Añejo</h3>
+
+          <div class="review-meta">
+            <span>Carvalho • Frutas secas</span>
+            <span class="review-score">8.7</span>
+          </div>
+
+          <p>
+            Maturada por 25 meses em carvalho, entrega perfil intenso,
+            especiado e mais complexo que a média da categoria.
+          </p>
+
+          <a href="#">Ler review →</a>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <img src="conteudo-donjulio.jpg" alt="Don Julio Blanco">
+
+        <div class="review-content">
+          <div class="review-category">
+            Blanco
+          </div>
+
+          <h3>Don Julio Blanco</h3>
+
+          <div class="review-meta">
+            <span>Agave • Cítrico</span>
+            <span class="review-score">8.4</span>
+          </div>
+
+          <p>
+            Perfil limpo, fresco e elegante. Uma tequila blanco
+            acessível e extremamente versátil.
+          </p>
+
+          <a href="#">Ler review →</a>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <img src="conteudo-blanco.jpg" alt="Tequila Blanco">
+
+        <div class="review-content">
+          <div class="review-category">
+            Guia
+          </div>
+
+          <h3>O que define uma blanco?</h3>
+
+          <div class="review-meta">
+            <span>Agave • Mineralidade</span>
+            <span class="review-score">Especial</span>
+          </div>
+
+          <p>
+            Entenda por que as tequilas sem passagem por barril
+            revelam mais claramente o terroir do agave.
+          </p>
+
+          <a href="#">Ler análise →</a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
